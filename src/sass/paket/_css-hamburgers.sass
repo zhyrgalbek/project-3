@@ -1,0 +1,265 @@
+/**
+ *  Do not remove the comment below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+
+.m-hamburger
+  -webkit-box-align: end
+  -ms-flex-align: end
+  align-items: flex-end
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  background-color: transparent
+  border-radius: none
+  border: none
+  box-shadow: none
+  box-sizing: border-box
+  cursor: pointer
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin: 0
+  overflow: hidden
+  text-indent: -9999px
+
+  *
+    box-sizing: border-box
+
+    &:before, &:after
+      box-sizing: border-box
+
+  span
+    background-color: #000
+    border-radius: 999px
+    height: 3px
+    width: 100%
+    position: relative
+    overflow: visible
+    -webkit-transition: all 0.3s linear
+    transition: all 0.3s linear
+
+    &::before, &::after
+      background-color: inherit
+      border-radius: 999px
+      content: ""
+      display: block
+      height: inherit
+      position: absolute
+      width: 100%
+      -webkit-transition: all 0.3s linear
+      transition: all 0.3s linear
+
+    &::before
+      top: -15px
+
+    &::after
+      bottom: -15px
+
+  &.mm-hamburger--r-stacked span
+    &::before, &::after
+      width: 40px
+
+  &.mm-hamburger--l-stacked span
+    &::before, &::after
+      width: 40px
+
+  &.mm-hamburger--r-stacked span
+    right: 0
+
+    &::before, &::after
+      right: 0
+
+  &.mm-hamburger--grid
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+
+    span
+      -webkit-transform-origin: 50% 50%
+      transform-origin: 50% 50%
+
+      &::before, &::after
+        -webkit-transform-origin: 50% 50%
+        transform-origin: 50% 50%
+
+  &.is-active
+    &.mm-hamburger--grid span
+      background: -webkit-linear-gradient(left, #000 0%, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%)
+      background: linear-gradient(to right, #000 0%, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%)
+      border-radius: 0
+      width: 80%
+
+      &::before, &::after
+        background: -webkit-linear-gradient(left, #000 0%, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%)
+        background: linear-gradient(to right, #000 0%, #000 20%, transparent 20%, transparent 40%, #000 40%, #000 60%, transparent 60%, transparent 80%, #000 80%, #000 100%)
+        border-radius: 0
+        width: 100%
+
+    &.mm-hamburger--l-stacked span
+      width: 75%
+
+      &::before
+        width: 50%
+
+    &.mm-hamburger--r-stacked span
+      overflow: visible
+      width: 75%
+      -webkit-transform: translateX(12px)
+      transform: translateX(12px)
+
+      &::before, &::after
+        right: 0
+
+      &::before
+        width: 50%
+
+    &.mm-hamburger--l-rotate span
+      -webkit-transform: rotate(-90deg)
+      transform: rotate(-90deg)
+
+    &.mm-hamburger--r-rotate span
+      -webkit-transform: rotate(90deg)
+      transform: rotate(90deg)
+
+    &.mm-hamburger--l-cross span
+      background-color: transparent
+
+      &:after
+        background-color: #000
+        bottom: 0
+        -webkit-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+
+      &:before
+        background-color: #000
+        top: 0
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+
+    &.mm-hamburger--r-cross span
+      background-color: transparent
+
+      &:after
+        background-color: #000
+        bottom: 0
+        -webkit-transform: rotate(45deg)
+        transform: rotate(45deg)
+
+      &:before
+        background-color: #000
+        top: 0
+        -webkit-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+
+    &.mm-hamburger--l-arrow span
+      &:after, &:before
+        left: 0.1em
+        width: 60%
+        -webkit-transform-origin: left
+        transform-origin: left
+
+      &:after
+        bottom: 0
+        -webkit-transform: rotate(35deg)
+        transform: rotate(35deg)
+
+      &:before
+        top: 0
+        -webkit-transform: rotate(-35deg)
+        transform: rotate(-35deg)
+
+    &.mm-hamburger--r-arrow span
+      &:after, &:before
+        right: 0.1em
+        width: 60%
+        -webkit-transform-origin: right
+        transform-origin: right
+
+      &:after
+        bottom: 0
+        -webkit-transform: rotate(-35deg)
+        transform: rotate(-35deg)
+
+      &:before
+        top: 0
+        -webkit-transform: rotate(35deg)
+        transform: rotate(35deg)
+
+    &.mm-hamburger--l-rotating-arrow span
+      -webkit-transform: translateY(-50%) rotate(180deg)
+      transform: translateY(-50%) rotate(180deg)
+
+      &:after, &:before
+        right: 0.1em
+        width: 60%
+        -webkit-transform-origin: right
+        transform-origin: right
+
+      &:after
+        bottom: 0
+        -webkit-transform: rotate(-35deg)
+        transform: rotate(-35deg)
+
+      &:before
+        top: 0
+        -webkit-transform: rotate(35deg)
+        transform: rotate(35deg)
+
+    &.mm-hamburger--r-rotating-arrow span
+      -webkit-transform: translateY(-50%) rotate(180deg)
+      transform: translateY(-50%) rotate(180deg)
+
+      &:after, &:before
+        left: 0.1em
+        width: 60%
+        -webkit-transform-origin: left
+        transform-origin: left
+
+      &:after
+        bottom: 0
+        -webkit-transform: rotate(35deg)
+        transform: rotate(35deg)
+
+      &:before
+        top: 0
+        -webkit-transform: rotate(-35deg)
+        transform: rotate(-35deg)
+
+  font-size: 10px
+  height: 6em
+  padding: 1em
+  width: 6em
+
+  &.mm-hamburger--small
+    font-size: 6px
+
+  &.mm-hamburger--medium
+    font-size: 10px
+
+  &.mm-hamburger--large
+    font-size: 12px
+
+  &.mm-hamburger--inverted
+    font-size: #ddd
+
+    span
+      background-color: #fff
+
+      &::before, &::after
+        background-color: #fff
+
+    &.is-active
+      span
+        &::before, &::after
+          background-color: #ddd
+
+      &.mm-hamburger--grid span
+        background: -webkit-linear-gradient(left, #ddd 0%, #ddd 20%, transparent 20%, transparent 40%, #ddd 40%, #ddd 60%, transparent 60%, transparent 80%, #ddd 80%, #ddd 100%)
+        background: linear-gradient(to right, #ddd 0%, #ddd 20%, transparent 20%, transparent 40%, #ddd 40%, #ddd 60%, transparent 60%, transparent 80%, #ddd 80%, #ddd 100%)
+
+        &::before, &::after
+          background: -webkit-linear-gradient(left, #ddd 0%, #ddd 20%, transparent 20%, transparent 40%, #ddd 40%, #ddd 60%, transparent 60%, transparent 80%, #ddd 80%, #ddd 100%)
+          background: linear-gradient(to right, #ddd 0%, #ddd 20%, transparent 20%, transparent 40%, #ddd 40%, #ddd 60%, transparent 60%, transparent 80%, #ddd 80%, #ddd 100%)
