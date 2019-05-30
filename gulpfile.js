@@ -7,7 +7,6 @@ var gulp = require("gulp"),
 	browserSync = require("browser-sync"),
 	reload = browserSync.reload,
 	spritesmith = require("gulp-spritesmith"),
-	gulpif = require("gulp-if"),
 	imagemin = require("gulp-imagemin");
 
 
@@ -17,9 +16,8 @@ var path = {
 		pug: "./src/pug/index.pug",
 		pugWatch: "./src/pug/**/*.pug",
 		concat: [
-			"node_modules/jquery/dist/jquery.min.js",
-			"node_modules/owl.carousel/dist/owl.carousel.js",
-			"node_modules/wow.js/dist/wow.min.js",
+			"bower_components/jquery/dist/jquery.min.js",
+			"bower_components/owl.carousel/dist/owl.carousel.min.js",
 			"./src/lib/*.js"
 		],
 		fonts: "./src/fonts/**/*.*"
@@ -40,7 +38,7 @@ gulp.task("fonts", function(){
 
 
 gulp.task("imagemin", function(){
-	return gulp.src("./src/img/*")
+	return gulp.src("./src/image/*")
 		.pipe(imagemin([
 			imagemin.gifsicle({interlaced: true}),
 			imagemin.jpegtran({progressive: true}),
@@ -62,8 +60,9 @@ gulp.task('sprite', function () {
 	    	styleName: 'sprite.css',
 	    	imgPath: 'dist/image/sprite.png'
 	    }))
-	    .pipe(gulpif('*.png', gulp.dest('./dist/image/')))
-	    .pipe(gulpif('*.css', gulp.dest('./dist/css/')));
+	    // .pipe(gulpif('*.png', gulp.dest('./dist/image/')))
+	    // .pipe(gulpif('*.css', gulp.dest('./dist/css/')));
+	    .pipe(gulp.dest('./dist/css/'));
 });
 
 gulp.task("watch", function(){
