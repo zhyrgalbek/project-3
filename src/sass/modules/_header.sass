@@ -1,6 +1,113 @@
-.text
-	text-align: center
-	color: red
-	font-family: "Raleway", sans-serif
-	font-weight: 400
-	font-family: normal
+.header
+	height: 100vh
+	position: relative
+	.owl-carousel
+		height: inherit
+		// border: 1px solid green
+		.owl-nav
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			color: green
+			font-size: 2em
+			// border: 1px solid red
+			width: 100%
+			.owl-next
+				position: absolute
+				right: 10%
+				// line-height: 2em
+			.owl-prev
+				position: absolute
+				left: 10%
+		.item
+			// border: 1px solid red
+			height: 100vh
+			background: url(../image/photo.jpg) no-repeat
+			background-size: cover
+			background-position: center center
+			display: flex
+			flex-flow: row nowrap
+			justify-content: center
+			align-items: center
+			position: relative
+			&:after
+				content: ""
+				display: block
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				bottom: 0
+				background: #000
+				opacity: 0.6
+		.item__text
+			// border: 1px solid red
+			height: 90vw
+			text-align: center
+			padding: 0 20px
+			z-index: 40
+			display: flex
+			align-items: center
+			flex-flow: column nowrap
+			justify-content: center
+			h3.text__h3
+				// +raleway(500)
+				font-family: 'Raleway'
+				font-weight: 500
+				font-style: normal
+				font-size: 1em
+				line-height: 2em
+				color: #fff
+			h2.text__h2
+				// +raleway(800)
+				font-family: 'Raleway'
+				font-weight: 800
+				font-style: normal
+				font-size: 52px
+				color: #fff
+			p.text__p
+				font-family: 'Montserrat', sans-serif
+				font-weight: 300
+				font-style: normal
+				font-size: 1em
+				line-height: 2em
+				color: #fff
+			.item__btn
+				display: inline-block
+				text-decoration: none
+				font-family: "Raleway", sans-serif
+				font-weight: 800
+				font-size: 14px
+				color: #fff
+				text-transform: uppercase
+				padding: 20px 35px
+				background: #998675
+				border-radius: 5px
+				margin-top: 40px
+				// box-shadow: 
+	.nav
+		position: absolute
+		top: 15px
+		left: 0
+		right: 0
+		// border: 1px solid red
+		z-index: 10
+		height: 50px
+		display: flex
+		// align-items: center
+		justify-content: space-between
+		padding: 0 20px
+		.logo
+			// border: 1px solid green
+			background: url(../image/logos.png) no-repeat
+			width: 180px
+			text-align: right
+			height: inherit
+			font-family: 'Raleway'
+			font-weight: 400
+			font-style: normal
+			font-size: 34px
+			line-height: 50px
+			text-transform: capitalize
+			color: #fff
