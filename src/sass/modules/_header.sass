@@ -1,6 +1,7 @@
 .header
 	height: 100vh
 	position: relative
+	background: #000
 	.owl-carousel
 		height: inherit
 		// border: 1px solid green
@@ -20,6 +21,11 @@
 			.owl-prev
 				position: absolute
 				left: 10%
+		.owl-dots
+			position: absolute
+			bottom: 20px
+			left: 0
+			right: 0
 		.item
 			// border: 1px solid red
 			height: 100vh
@@ -45,6 +51,7 @@
 			// border: 1px solid red
 			height: 90vw
 			text-align: center
+			max-width: 590px
 			padding: 0 20px
 			z-index: 40
 			display: flex
@@ -52,24 +59,16 @@
 			flex-flow: column nowrap
 			justify-content: center
 			h3.text__h3
-				// +raleway(500)
-				font-family: 'Raleway'
-				font-weight: 500
-				font-style: normal
+				+raleway(500)
 				font-size: 1em
 				line-height: 2em
 				color: #fff
 			h2.text__h2
-				// +raleway(800)
-				font-family: 'Raleway'
-				font-weight: 800
-				font-style: normal
+				+raleway(800)
 				font-size: 52px
 				color: #fff
 			p.text__p
-				font-family: 'Montserrat', sans-serif
-				font-weight: 300
-				font-style: normal
+				+montserrat(300)
 				font-size: 1em
 				line-height: 2em
 				color: #fff
@@ -88,26 +87,111 @@
 				// box-shadow: 
 	.nav
 		position: absolute
-		top: 15px
+		top: 20px
 		left: 0
 		right: 0
 		// border: 1px solid red
 		z-index: 10
 		height: 50px
-		display: flex
-		// align-items: center
-		justify-content: space-between
-		padding: 0 20px
+		.nav-block
+			display: flex
+			// align-items: center
+			justify-content: space-between
+			padding: 0 20px
 		.logo
 			// border: 1px solid green
 			background: url(../image/logos.png) no-repeat
 			width: 180px
 			text-align: right
 			height: inherit
-			font-family: 'Raleway'
-			font-weight: 400
-			font-style: normal
+			+raleway(400)
 			font-size: 34px
 			line-height: 50px
 			text-transform: capitalize
 			color: #fff
+		.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before
+				background-color: #fff
+		.menu
+			list-style-type: none
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			background: rgba(0, 0, 0, 0.9)
+			height: 0
+			overflow: hidden
+			transition: height 0.3s ease-out
+			display: flex
+			flex-flow: column nowrap
+			justify-content: space-around
+			.menu-li
+				margin: 0	
+				padding: 0	
+				text-align: center
+				// border: 1px solid red
+				.menu-link
+					text-decoration: none
+					+montserrat(300)
+					text-transform: capitalize
+					color: #fff
+					display: block
+					padding: 20px 0
+					// border: 1px solid green
+		.menu-active
+				height: 90vh
+	.form
+		box-sizing: border-box: 
+		width: 40px	
+		// height: 20px
+		border: 1px solid red
+		padding: 20px 40px 20px 0
+		background: url(../image/icon-search.png) no-repeat
+		background-position: right center
+		transition: width 0.3s ease-out
+		.search
+			width: 100%
+			height: 100%
+			display: none
++media(480px)
+	.header .owl-carousel .owl-nav .owl-next,
+	.header .owl-carousel .owl-nav .owl-prev
+		// border: 1px solid red
+		width: 55px
+		height: 75px
+		background: url(../image/right.png) no-repeat
+		background-position: right center
+	.header .owl-carousel .owl-nav .owl-prev
+		transform: rotate(180deg)
+	// .header .hamburger
+	// 	display: none
+	// .header .nav .menu
+	// 	flex-flow: row nowrap
+	// 	height: 70px
+	// 	justify-content: space-between
+	// 	align-items: center
+	// 	background: rgba(0, 0, 0, 0)
+	// 	padding: 0 20px
++media(1055px)
+	.header .hamburger
+		display: none
+	.header .nav
+		// border: 1px solid green
+	.header .nav .nav-block
+		// border: 1px solid red
+		display: flex
+		margin: 0 auto
+		max-width: 1180px
+		justify-content: space-between
+	.header .nav .logo
+		// border: 1px solid red
+	.header .nav .menu
+		// border: 1px solid red
+		position: static
+		flex-flow: row nowrap
+		// height: 70px
+		height: 100%
+		justify-content: space-between
+		align-items: center
+		background: rgba(0, 0, 0, 0)
+		padding: 0 20px
+		width: 65%
