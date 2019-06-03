@@ -32,23 +32,37 @@ $(document).ready(function(){
 	// 	$(".hamburger, .logo").css("display", "none");
 	// });
 	var bool;
-	$(".form").on("click",function(){
-		if(bool == true){
-			bool=false;
-			// console.log(bool);	
-			$(".nav-block").css("justify-content", "space-between");
-			$(this).css("width", "40px");
-			$(".search").css("display", "none");
-			$(".hamburger, .logo").css("display", "block");	
-		}
-
-		else{
-			bool = true;
-			// console.log(bool);
-			$(".nav-block").css("justify-content", "flex-end");
-			$(this).css("width", "100%");
-			$(".search").css("display", "block");
-			$(".hamburger, .logo").css("display", "none");
-		}
+	$(".form button").on("click",function(){
+		// if(bool == true){
+			// bool=false;
+			// // console.log(bool);	
+			// $(".nav-block").css("justify-content", "space-between");
+			// $(".form").css("width", "40px");
+			// $(".search").css("display", "none");
+			// $(".hamburger, .logo").css("display", "block");	
+		// }
+		// else{
+		// 	bool = true;
+		// 	// console.log(bool);
+		// 	$(".nav-block").css("justify-content", "flex-end");
+		// 	$(this).css("width", "100%");
+		// 	$(".search").css("display", "block");
+		// 	$(".hamburger, .logo").css("display", "none");
+		// }
+		$(".nav-block").css("justify-content", "flex-end");
+		$(".form").css({
+			"width": "100%",
+			// "height": "50px"
+		});
+		$(".search").css("display", "block");
+		$(".hamburger, .logo").css("display", "none");
+		$(document).mouseup(function(e){
+			if(!$(e.target).is('[data-rel="drop"]')){
+				$(".nav-block").css("justify-content", "space-between");
+				$(".form").css("width", "40px");
+				$(".search").css("display", "none");
+				$(".hamburger, .logo").css("display", "block");	
+			}
+		});
 	});
 });

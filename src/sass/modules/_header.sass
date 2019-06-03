@@ -111,6 +111,8 @@
 			color: #fff
 		.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before
 				background-color: #fff
+		.hamburger
+			order: 1
 		.menu
 			list-style-type: none
 			position: absolute
@@ -140,18 +142,33 @@
 		.menu-active
 				height: 90vh
 	.form
-		box-sizing: border-box: 
+		box-sizing: border-box
 		width: 40px	
 		// height: 20px
-		border: 1px solid red
-		padding: 20px 40px 20px 0
-		background: url(../image/icon-search.png) no-repeat
-		background-position: right center
+		// border: 1px solid red
+		padding: 0px 0px 0px 0
 		transition: width 0.3s ease-out
+		display: flex
+		flex-flow: row nowrap
 		.search
 			width: 100%
 			height: 100%
+			padding: 10px 10px
 			display: none
+			border: none
+			+montserrat(300)
+			font-size: 1.2em
+			background: rgba(255, 255, 255, 0.5)
+			color: #000
+			// opacity: 0.5
+		button
+			box-sizing: border-box
+			width: 40px
+			height: 50px
+			border: none
+			// border: 1px solid green
+			background: url(../image/icon-search.png) no-repeat
+			background-position: center center
 +media(480px)
 	.header .owl-carousel .owl-nav .owl-next,
 	.header .owl-carousel .owl-nav .owl-prev
