@@ -81,7 +81,8 @@
 				color: #fff
 				text-transform: uppercase
 				padding: 20px 35px
-				background: #998675
+				// background: #998675
+				background: $btn-color
 				border-radius: 5px
 				margin-top: 40px
 				// box-shadow: 
@@ -109,11 +110,16 @@
 			line-height: 50px
 			text-transform: capitalize
 			color: #fff
+		.nav-block_right
+			display: flex
+			// border: 1px solid red
 		.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before
 				background-color: #fff
 		.hamburger
 			// display: block !important
 			order: 1
+		.hamburger-drop
+			display: none
 		.menu
 			list-style-type: none
 			position: absolute
@@ -140,6 +146,8 @@
 					display: block
 					padding: 20px 0
 					// border: 1px solid green
+					&:hover
+						color: #a69683
 		.menu-active
 				height: 90vh
 	.form
@@ -161,6 +169,7 @@
 			font-size: 1.2em
 			background: rgba(255, 255, 255, 0.5)
 			color: #000
+			border-radius: 3px
 			// opacity: 0.5
 		button
 			box-sizing: border-box
@@ -180,8 +189,8 @@
 		background-position: right center
 	.header .owl-carousel .owl-nav .owl-prev
 		transform: rotate(180deg)
-	.header .nav .nav-block .hamburger
-		display: none !important
+	// .header .nav .nav-block .hamburger
+	// 	display: none !important
 	.header .nav .nav-block
 		// border: 1px solid red
 		display: flex
@@ -216,9 +225,14 @@
 		position: static
 		flex-flow: row nowrap
 		// height: 70px
-		height: 100%
+		// height: 100%
 		justify-content: space-between
 		align-items: center
 		background: rgba(0, 0, 0, 0)
 		padding: 0 20px
-		width: 65%
+		// width: 100%
+	.header .nav .menu .menu-li
+		margin-right: 30px
+		&:last-child
+			margin-right: 0
+			
