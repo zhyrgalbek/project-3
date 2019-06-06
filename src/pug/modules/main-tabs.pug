@@ -9,26 +9,129 @@
         .main-tabs__tabs
             ul.tabs
                 li.tabs-li
-                    a(href="#") all
+                    a(href="#all" data-tab="all") all
                 li.tabs-li
-                    a(href="#") web design
+                    a(href="#web" data-tab="web") web design
                 li.tabs-li
-                    a(href="#") mobile app
+                    a(href="#mobile" data-tab="mobile") mobile app
                 li.tabs-li
-                    a(href="#") illustration
+                    a(href="#illustration" data-tab="illustration") illustration
                 li.tabs-li
-                    a(href="#") photography
-            .row
-                .col
-                    .tabs-block
-                .col
-                    .tabs-block
-                .col
-                    .tabs-block
-                .col
-                    .tabs-block
-                .col
-                    .tabs-block
-                .col
-                    .tabs-block
+                    a(href="#photography" data-tab="photography") photography
+            #all.tab_content(data-tab="all")
+                .row
+                    .col
+                        .tabs-block
+                            img(src="image/tabs_first.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_second.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_third.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_fourst.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_fifst.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/sixest.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+            #web.tab_content(data-tab="web")
+                .row
+                    .col
+                        .tabs-block
+                            img(src="/image/sixest.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_fifst.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+            #mobile.tab_content(data-tab="mobile")
+                .row
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_fourst.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_third.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+            #illustration.tab_content(data-tab="illustration")
+                .row
+                    .col
+                        .tabs-block
+                            img(src="image/tabs_third.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_first.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+            #photography.tab_content(data-tab="photography")
+                .row
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_second.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/tabs_fourst.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
+                    .col
+                        .tabs-block
+                            img(src="/image/sixest.jpg", alt="image").tabs-block__img
+                            .tabs-block__info
+                                .tabs-block__info-h2 Claritas Etiam Processus
+                                .tabs-block__info-p.
+                                    Photography, Nature
         .main-tabs__btn
+            a(href="#").item__btn load more
