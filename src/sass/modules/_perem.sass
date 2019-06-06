@@ -2,6 +2,41 @@
 =media($m)
 	@media screen and (min-width: $m)
 		@content
+//setka
+
+=setka($tablet: 1/2, $desktop: 1/4)
+	.row
+		// padding: 20px 0
+		+media(480px)
+		display: flex
+		flex-flow: row wrap
+		justify-content: flex-start
+		border: 1px solid green
+		margin-left: -20px
+		margin-right: -20px
+	.col
+		// min-height: 200px
+		border: 1px solid red
+		// margin-top: 20px
+		box-sizing: border-box
+		width: 100%
+		padding: 20px 0
+		// &:first-child
+		// 	padding-top: 0
+		// &:last-child
+		// 	padding-bottom: 0
+		+media(480px)
+			padding-left: 20px
+			padding-right: 20px
+			// &:nth-child(2)
+			// 	padding-top: 0
+			// &:nth-child(2n+1)
+			// 	padding-left: 0
+			// &:nth-child(2n+2)
+			// 	padding-right: 0
+			width: $tablet * 100%
+		+media(768px)
+			width: $desktop * 100%
 //fonts
 =raleway($weight)
 	font:
@@ -19,6 +54,8 @@
 		weight: normal
 		style: normal
 //normal-0
+//btn
+$btn-color: #998675
 
 h1,h2,h3,h4,h5,h6,p,ul,li
 	margin: 0
@@ -37,4 +74,9 @@ html, body
 	overflow: hidden
 .container
 	max-width: 1180px
+	margin: 0 auto
+	padding: 0 20px
+	border: 1px solid blue
+	+media(480)
+		padding: 0
 

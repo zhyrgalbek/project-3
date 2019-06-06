@@ -1,0 +1,25 @@
+.main-header
+    padding: 70px 0
+    background: #fff
+    +setka(1/2, 1/3)
+    &_read
+        min-height: 200px
+        border: 1px solid red
+        // margin-top: 20px
+        box-sizing: border-box
+        padding: 20px 0
+        // width: 100px
+        &:first-child
+            margin-top: 0
++media(480px)
+    .main-header .main-header_flex
+        display: flex
+        flex-flow: row wrap
+        justify-content: right
+    .main-header .main-header_flex .main-header_read
+        +setka(1/2)
++media(768px)
+    .main-header .main-header_flex
+        flex-flow: row nowrap
+    .main-header .main-header_flex .main-header_read
+        +setka(1/4)
