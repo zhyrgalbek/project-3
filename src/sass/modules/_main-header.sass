@@ -1,25 +1,56 @@
 .main-header
     padding: 70px 0
     background: #fff
-    +setka(1/2, 1/3)
+    +setka(1/2, 1/4)
     &_read
-        min-height: 200px
-        border: 1px solid red
-        // margin-top: 20px
-        box-sizing: border-box
-        padding: 20px 0
-        // width: 100px
-        &:first-child
-            margin-top: 0
-+media(480px)
-    .main-header .main-header_flex
-        display: flex
-        flex-flow: row wrap
-        justify-content: right
-    .main-header .main-header_flex .main-header_read
-        +setka(1/2)
-+media(768px)
-    .main-header .main-header_flex
-        flex-flow: row nowrap
-    .main-header .main-header_flex .main-header_read
-        +setka(1/4)
+        text-align: center
+        position: relative
+        // &:after
+        //     content: ""
+        //     position: absolute
+        //     display: block
+        //     border-bottom: 3px solid #f1eee9
+        //     // border-bottom: 3px solid #c7b299
+        //     width: 30%
+        //     left: 50%
+        //     top: 100%
+        //     transform: translateX(-50%)
+    .line
+        position: absolute
+        display: block
+        border-bottom: 3px solid #f1eee9
+        // border-bottom: 3px solid #c7b299
+        width: 30%
+        left: 50%
+        top: 100%
+        transform: translateX(-50%)
+        transition: border-color 0.3s ease-in
+    .read_icon
+        // border: 1px solid red
+        background: url(../image/main-read_sprite.png) no-repeat
+        height: 54px
+        width: 49px
+        margin: 0 auto
+    .read_icon-2
+        background-position: -49px 0
+        width: 42px
+    .read_icon-3
+        background-position: -92px 0
+        // width: 55px
+    .read_icon-4
+        background-position: -143px 0
+        width: 56px
+    .read_h2
+        +raleway(600)
+        text-transform: capitalize
+        color: #555555
+        font-size: 22px
+        line-height: auto
+        margin-top: 15px
+        margin-bottom: 15px
+        transition: color 0.3s ease-out
+    p.read_p
+        +montserrat(300)
+        color: #8c8c8c
+        font-size: 14px
+        padding-bottom: 25px
