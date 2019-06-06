@@ -1,0 +1,32 @@
+.main-theme
+    padding: 50px 0
+    background: #3d2a22
+    +setka(1,1/2)
+    &_text
+        text-align: left
+    .row .col
+        // border: 1px solid red
+    .theme_h2
+        +raleway(400)
+        font-size: 28px
+        color: #fff
+        margin-bottom: 10px
+        text-align: center
+    .theme-logo
+        color: #c7b299
+    .theme_p
+        +montserrat(400)
+        font-size: 18px
+        text-align: center
+        color: #615855
+    .theme-btn
+        text-align: center
++media(770px)
+    .main-theme
+        .theme
+            &-btn
+                text-align: right
+            &_p
+                text-align: left
+            &_h2
+                text-align: left
