@@ -18,6 +18,7 @@ var path = {
 		concat: [
 			"bower_components/jquery/dist/jquery.min.js",
 			"bower_components/owl.carousel/dist/owl.carousel.min.js",
+			"node_modules/video.js/dist/video.min.js",
 			"./src/lib/*.js"
 		],
 		fonts: "./src/fonts/**/*.*"
@@ -34,6 +35,7 @@ gulp.task("fonts", function(){
 	return gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.dest.fonts))
 });
+
 
 
 

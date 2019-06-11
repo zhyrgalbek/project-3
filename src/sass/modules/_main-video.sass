@@ -1,0 +1,51 @@
+.main-video
+    // border: 1px solid red
+    position: relative
+    overflow: hidden
+    .fonvideo
+        position: absolute
+        display: block
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 9
+        .video-text
+            position: absolute
+            top: 50%
+            left: 50%
+            text-align: center
+            width: 80%
+            transform: translate(-50%, -50%)
+            &-h2
+                +raleway(500)
+                font-size: 30px
+                line-height: auto
+                color: #fff
+                margin-bottom: 10px
+            &-p
+                +montserrat(300)
+                font-size: 16px
+                line-height: 28px
+                color: #fff
+#my-video
+    width: 100%
+    height: 90vh
+    position: relative
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before
+    display: none
+.video-js .vjs-big-play-button
+    background: url(../image/icon-play.png) no-repeat
+    background-size: 70% 70%
+    background-position: center center
+    width: 102px
+    height: 102px
+    border: none
+    border-radius: 50%
+    top: 50%
+    left: 50%
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 100
+.video-js:hover
+    .vjs-big-play-button
+        	background-color: rgba(0, 0, 0, 0.8)

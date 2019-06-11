@@ -105,6 +105,9 @@ $(document).ready(function(){
 		}
 		// $(tabContent).show();
 	});
+	$(".video-js .vjs-big-play-button").click(function(){
+		$(".fonvideo").css("display", "none");
+	})
 	// $(".tab_content .col").hover(function(){
 	// 	(this).$(".tabs-block:after").css("display", "block");
 	// }, function(){

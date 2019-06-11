@@ -1,0 +1,103 @@
+.video-js
+  .vjs-menu-button-inline
+    &.vjs-slider-active, &:focus, &:hover
+      width: 10em
+
+  &.vjs-no-flex .vjs-menu-button-inline
+    width: 10em
+
+  .vjs-controls-disabled .vjs-big-play-button
+    display: none !important
+
+  .vjs-control
+    width: 3em
+
+  .vjs-menu-button-inline:before
+    width: 1.5em
+
+.vjs-menu-button-inline .vjs-menu
+  left: 3em
+
+.video-js .vjs-load-progress div, .vjs-seeking .vjs-big-play-button, .vjs-waiting .vjs-big-play-button
+  display: none !important
+
+.video-js
+  .vjs-mouse-display:after, .vjs-play-progress:after
+    padding: 0 .4em .3em
+
+  &.vjs-ended
+    .vjs-loading-spinner
+      display: none
+
+    .vjs-big-play-button
+      display: block !important
+
+  &.vjs-paused .vjs-big-play-button
+    display: block
+
+.vjs-paused.vjs-has-started.video-js .vjs-big-play-button, video-js.vjs-ended .vjs-big-play-button
+  display: block
+
+.video-js
+  .vjs-big-play-button
+    top: 50%
+    left: 50%
+    background-color: rgba(0, 0, 0, 0.35)
+    font-size: 3.5em
+    border-radius: 50%
+
+    &:active, &:focus
+      background-color: rgba(0, 0, 0, 0.35)
+
+  &:hover .vjs-big-play-button
+    background-color: rgba(0, 0, 0, 0.35)
+
+  .vjs-loading-spinner
+    border-color: rgba(255, 255, 255, 0.7)
+
+  .vjs-control-bar2
+    background-color: transparent
+
+  .vjs-control-bar
+    background-color: rgba(0, 0, 0, 0) !important
+    color: #fff
+    font-size: 18px
+
+  .vjs-play-progress, .vjs-volume-level
+    background-color: #2483d5
+
+  .vjs-big-play-button
+    height: 2em !important
+    width: 2em !important
+    line-height: 1.9em !important
+    margin-top: (-1em) !important
+    margin-left: -1em
+    border-width: 3px
+
+    &:before
+      font-size: 50px
+
+  .vjs-icon-play:before
+    font-size: 50px
+
+  .vjs-progress-holder
+    font-size: 1.7em
+    border-radius: 10px
+
+    .vjs-load-progress
+      border-radius: 10px
+
+      div
+        border-radius: 10px
+
+    .vjs-play-progress
+      border-radius: 10px
+
+  .vjs-slider
+    border-radius: 10px
+
+.vjs-volume-level
+  border-radius: 10px
+
+.video-js .vjs-load-progress
+  background: rgba(255, 255, 255, 0.5)
