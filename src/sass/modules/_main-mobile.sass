@@ -1,0 +1,83 @@
+.main-mobile
+    +setka(1, 1/2)
+    .mobile-img
+        display: none
+    .mobile-text
+        padding: 40px 0
+        text-align: center
+        // border: 1px solid re
+        // border: 1px solid green
+        &__h2
+            +raleway(600)
+            font-size: 30px
+            line-height: auto
+            color: #555555
+            text-align: center
+            margin-bottom: 20px
+        &__p
+            +montserrat(300)
+            font-size: 16px
+            line-height: 28px
+            color: #8c8c8c
+            text-align: center
+            margin-bottom: 20px
+        &__ul
+            margin: 0
+            padding: 0
+            list-style-type: none
+            width: 90%
+        &__ul-li
+                +montserrat(300)
+                font-size: 1em
+                line-height: 32px
+                color: #8c8c8c
+                // border: 1px solid green
+                position: relative
+                // text-indent: 30px
+                margin-top: 20px
+                margin-left: 40px
+                // width: 50%
+                &:first-child
+                    margin-top: 0
+                &:after
+                    content: ""
+                    position: absolute
+                    top: 8px
+                    right: 100%
+                    width: 30px
+                    height: 20px
+                    background: url("../image/01.png") no-repeat
+                    background-size: contain
++media(480px)
+    .main-mobile .mobile-text
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+    .main-mobile .mobile-text__ul-li
+        // border: 1px solid red
+        width: 75%
++media(800px)
+    .main-mobile
+        padding: 60px 0
+    .main-mobile .mobile-img
+        display: block
+    .col
+        display: flex
+        align-items: center
+    .main-mobile .mobile-text
+        // border: 1px solid red
+        display: block
+        text-align: left
+        &__h2
+            text-align: left
+        &__p
+            text-align: left
+    .main-mobile .mobile-text__ul
+        width: 100%
+        // border: 1px solid red    
+    .main-mobile .mobile-text__ul-li
+        // border: 1px solid red
+        width: 100%
+        margin-left: 0
+        margin-top: 0px
+        
