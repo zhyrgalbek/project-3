@@ -1,0 +1,151 @@
+.main-posts
+    padding: 70px 0
+    // border: 1px solid red
+    &__h2
+        +raleway(600)
+        font-size: 30px
+        line-height: auto
+        color: #555555
+        text-align: center
+    &__p
+        +montserrat(300)
+        font-size: 1em
+        line-height: 28px
+        color: #8c8c8c
+        text-align: center
+        margin: 10px 0
+    &__block-img
+        height: 220px
+        // height: 50vw
+        // border: 1px solid red
+        overflow: hidden
+        img
+            height: 100%
+            transform: scale(1.1)
+            // transition: 0.5s ease-out
+            @extend %effect
+    &__block-info
+        padding: 30px 20px
+        @extend %effect
+        %position
+            position: relative
+            z-index: 11
+        h2
+            +raleway(500)
+            font-size: 20px
+            line-height: auto
+            color: #555555
+            margin-bottom: 10px
+            @extend %position
+            @extend %effect
+        p
+            +montserrat(300)
+            font-size: 14px
+            line-height: 22px
+            color: #8c8c8c
+            position: relative
+            @extend %position
+            @extend %effect
+    &__block-btn
+        // border: 1px solid red
+        position: relative
+        .item__btn
+            position: absoulte
+            z-index: 11
+            background: transparent
+            // color: #c7b299
+            color: #c7b299
+            padding: 0
+            margin: 20px 0
+            position: relative
+            font-weight: 400
+            // border: 1px solid red
+            &:after
+                content: ""
+                position: absolute
+                top: 2px
+                left: 115%
+                display: block
+                border: 6px solid transparent
+                border-left: 9px solid #c7b299
+    &__block
+        position: relative
+        .data
+            position: absolute
+            top: 20px
+            left: 20px
+            // border: 1px solid red
+            border-radius: 5px
+            z-index: 12
+            overflow: hidden
+            .data-chislo
+                +montserrat(300)
+                font-size: 24px
+                line-heigt: 20px
+                color: #fff
+                background: #363636
+                padding: 5px 12px
+                @extend %effect
+                // transition: 0.5s ease-out
+            .data-mes
+                +roboto()
+                font-size: 12px
+                line-height: 20px
+                color: #fff
+                text-transform: capitalize
+                padding: 5px 12px
+                background: #252525
+                @extend %effect
+                // transition: 0.5s ease-out
+        &:before
+            content: ""
+            position: absolute
+            display: block
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.7)
+            @extend %effect
+            // transition: 0.5s ease-out
+            opacity: 0
+            z-index: 10
+    &__block:hover
+        // background: #000
+        .data
+            .data-chislo
+                background-color: #c7b299
+            .data-mes
+                background: #a48d72
+        img
+            transform: scale(1.4)
+        &:before
+            opacity: 1
+        .main-posts__block-info
+            // background: #362f2d
+            background: #998675
+            h2
+                color: #c7b299
+            p
+                color: #fff
+                // position: absolute                
+    .owl-carousel
+        margin: 30px 0
+        .item
+            // padding: 50px 0
+            // border: 1px solid green
+        .owl-nav
+            position: absolute
+            top: 100%
+            font-size: 2em
+            width: 100%
+            // border: 1px solid green
+            %owl-nav
+                position: absolute
+            .owl-next
+                @extend %owl-nav
+                right: 45%
+                // transfrom: translateX(-50%)
+            .owl-prev
+                @extend %owl-nav
+                left: 45%

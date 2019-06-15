@@ -13,7 +13,7 @@ $(document).ready(function(){
 			$(".hamburger").removeClass("hamburger-drop");
 		}
 	});
-	$(".owl-carousel").owlCarousel({
+	$("#header_owl").owlCarousel({
 		// margin: 10,
 		loop: true,
 		navText: ["",""],
@@ -113,5 +113,34 @@ $(document).ready(function(){
 	// }, function(){
 	// 	(this).$(".tabs-block:after").css("display", "none");
 	// })
+	$("#main-posts__owl").owlCarousel({
+		margin: 40,
+		// nav: true,
+		responsiveClass:true,
+		responsive:{
+			0:{
+				items: 1,
+				// nav: true
+			},
+			600:{
+				items: 2,
+				// nav:true
+			},
+			1000:{
+				items: 3,
+				// nav: true,
+				// loop: true
+			}
+		}
+	})
+
+
+
+
+
+
+
+
+
 
 });

@@ -6,6 +6,7 @@
 
 =setka($tablet: 1/2, $desktop: 1/4)
 	.row
+		display: block
 		// padding: 20px 0
 		+media(480px)
 			display: flex
@@ -49,7 +50,7 @@
 		family: 'Montserrat', sans-serif
 		weight: $weight
 		style: normal
-=roboto
+=roboto()
 	font:
 		family: "Roboto-Regular", sans-serif
 		weight: normal
@@ -74,6 +75,8 @@ $btn-color: #998675
 	// background: #998675
 	background: $btn-color
 	border-radius: 5px
+%effect
+    transition: 0.5s ease-out
 .item__btn-top
 	margin-top: 40px
 	// box-shadow: 
