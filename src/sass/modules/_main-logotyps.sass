@@ -1,0 +1,32 @@
+.main-logotyps
+    padding: 130px 0
+    background: url(../image/logotyps-fon.jpg) no-repeat
+    background-size: cover
+    background-position: center center
+    position: relative
+    +setka(1/2, 1/4)
+    &:after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0, 0, 0, 0.7)
+        display: block
+    .logotyps-icon
+        position: relative
+        z-index: 1
+        height: 220px
+        width: 215px
+        margin: 0 auto
+        background: url(../image/logotyps-logo.png) no-repeat
+        background-size: cover
+        background-position: 0 0
+    .col:nth-child(2)
+        .logotyps-icon
+            background-position: -220px 0
+            // border: 1px solid red
+    .col:last-child
+        .logotyps-icon
+            background-position: -657px 0
