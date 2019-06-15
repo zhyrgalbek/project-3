@@ -1,5 +1,6 @@
 .main-mobile
-    +setka(1, 1/2)
+    // +setka(1, 1/2)
+        // border: 1px solid green
     .mobile-img
         display: none
     .mobile-text
@@ -25,7 +26,7 @@
             margin: 0
             padding: 0
             list-style-type: none
-            width: 90%
+            width: 100%
         &__ul-li
                 +montserrat(300)
                 font-size: 1em
@@ -50,17 +51,28 @@
                     background-size: contain
 +media(480px)
     .main-mobile .mobile-text
-        display: flex
-        flex-flow: column nowrap
-        align-items: center
-    .main-mobile .mobile-text__ul-li
+        // display: flex
+        // flex-flow: column nowrap
+        // align-items: center
         // border: 1px solid red
-        width: 75%
+    .main-mobile .mobile-text__ul
+        // border: 1px solid red
+        text-align: left
+        overflow: hidden
+        // padding-left: 40px
+        // width: 75%
 +media(800px)
     .main-mobile
-        padding: 60px 0
+        padding: 60px 0 0 0
+        .row
+            display: flex
+            justify-content: space-between
+            .col
+                // border: 1px solid red
     .main-mobile .mobile-img
+        // border: 1px solid red
         display: block
+        margin-bottom: -4px
     .col
         display: flex
         align-items: center
@@ -68,12 +80,14 @@
         // border: 1px solid red
         display: block
         text-align: left
+        padding-left: 50px
         &__h2
             text-align: left
         &__p
             text-align: left
     .main-mobile .mobile-text__ul
         width: 100%
+        padding-left: 150px
         // border: 1px solid red    
     .main-mobile .mobile-text__ul-li
         // border: 1px solid red

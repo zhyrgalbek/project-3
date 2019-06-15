@@ -80,8 +80,8 @@ gulp.task("watch", function(){
 	return gulp.src(path.src.sass)
 		.pipe(sass())
 		.pipe(autoprefixer({
-			browsers: ['last 2 versions'],
-			cascade: false
+			browsers: ['last 25 versions']
+			// cascade: false
 		}))
 		.pipe(gulp.dest(path.dest.sass))
 		.pipe(reload({

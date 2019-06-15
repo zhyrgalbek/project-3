@@ -1,0 +1,65 @@
+.main-counters
+    // border: 1px solid red
+    // background-image: -moz-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%)
+    // background-image: -webkit-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%)
+    // background-image: -ms-linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%)
+    background-image: linear-gradient( 0deg, rgb(33,27,25) 0%, rgb(78,52,39) 100%)
+    padding: 50px 0
+    +setka(1/3,1/5)
+    .row
+        justify-content: center
+        .col:nth-child(2)
+            .counters-block__icon
+                background-position: -44px 0
+        .col:nth-child(3)
+            .counters-block__icon
+                width: 50px
+                background-position: -95px 0
+        .col:nth-child(4)
+            .counters-block__icon
+                width: 48px
+                background-position: -143px 0
+        .col:nth-child(5)
+            .counters-block__icon
+                width: 56px
+                background-position: -190px 0
+    .counters-block
+        margin: 0 auto
+        width: 140px
+        // border: 1px solid red
+        padding-bottom: 20px
+        position: relative
+        margin-bottom: 30px
+        &:after
+            content: ""
+            position: absolute
+            display: block
+            width: 30%
+            height: 3px
+            background-color: #fff
+            top: 100%
+            left: 50%
+            transform: translateX(-50%)
+        &__icon
+            margin: 0 auto
+            width: 52px
+            height: 44px
+            background: url(../image/main-counters.png) no-repeat
+            background-size: cover
+            &:first-child
+                background-position: 5px 0
+        &__info
+            // +montserrat(300)
+            font-family: "Montserrat-UltraLight"
+            font-size: 48px
+            text-align: center
+            padding: 20px 0
+            color: #fff
+        &__p
+            +montserrat(300)
+            font-size: 14px
+            line-height: 20px
+            color: #c7b299
+            text-transform: uppercase
+            text-align: center
+
