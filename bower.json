@@ -1,0 +1,23 @@
+{
+  "name": "project-3",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "zhyrgalbek <zhyrgalbek.kamalov@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/zhyrgalbek/project-3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4",
+    "CSS-Hamburgers": "hamburgers#^1.0.2"
+  }
+}
