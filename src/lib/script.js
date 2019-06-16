@@ -94,14 +94,14 @@ $(document).ready(function(){
 		$(this).addClass("tabs-active");
 		// $(".tab_content").hide();
 		var id = $(this).attr("data-tab");
-		var tabContent = $('.col[data-tab="'+ id +'"]');
+		var tabContent = $('.tab_content .col[data-tab="'+ id +'"]');
 		if(id != "all"){
-			$(".col").addClass("zoomOut").hide();
+			$(".tab_content .col").addClass("zoomOut").hide();
 			$(tabContent).removeClass("zoomOut");
 			$(tabContent).addClass("zoomIn").show();
 		} else if(id == "all") {
-			$(".col").removeClass("zoomOut");
-			$(".col").addClass("zoomIn").show();
+			$(".tab_content .col").removeClass("zoomOut");
+			$(".tab_content .col").addClass("zoomIn").show();
 		}
 		// $(tabContent).show();
 	});
