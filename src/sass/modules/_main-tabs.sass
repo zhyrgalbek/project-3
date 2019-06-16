@@ -64,11 +64,13 @@
                 left: 0
                 background: rgba(0, 0, 0, 0)
                 // display: none
-                transition: background 0.3s ease-in
+                // transition: background 0.3s ease-in
+                @extend %effect
             &__img
                 width: 100%
                 height: 300px
-                transition: 0.3s ease
+                @extend %effect
+                // transition: 0.3s ease
                 // height: auto
                 // background-size: contain
             &__info
@@ -102,7 +104,8 @@
             img
                 width: 100%
                 height: 100%
-                transition: 0.8s ease-out
+                @extend %effect
+                // transition: 0.8s ease-out
             // display: none
     .col:hover
         .tab-block__img img
