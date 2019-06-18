@@ -4,13 +4,14 @@
 		@content
 //setka
 
-=setka($tablet: 1/2, $desktop: 1/4)
+=setka($tablet: 1/2, $desktop: 1/4,$align-items: center)
 	.row
 		display: block
 		// padding: 20px 0
 		+media(480px)
 			display: flex
 			flex-flow: row wrap
+			align-items: $align-items
 			justify-content: flex-start
 			// border: 1px solid green
 			margin-left: -20px
@@ -79,7 +80,20 @@ $btn-color: #998675
     transition: 0.5s ease-out
 .item__btn-top
 	margin-top: 40px
-	// box-shadow: 
+	// box-shadow:
+// footer-head
+$footer-head__bg-color: #191919
+$footer-head__h2-color: #fff
+$footer-head__p-color: #555555
+$footer-head__data-color: #363636
+$footer-head__btn-color: #d1d1d1
+// footer foot
+$footer-foot__fon: #111111
+$footer-foot__p-color: #555555
+$footer-foot__p-logo-color: #959595
+
+
+
 h1,h2,h3,h4,h5,h6,p,ul,li
 	margin: 0
 	padding: 0
@@ -94,7 +108,7 @@ html, body
 	margin: 0
 	padding: 0
 	min-height: 100%
-	padding-bottom: 1000px
+	// padding-bottom: 1000px
 	overflow: hidden
 .container
 	max-width: 1180px

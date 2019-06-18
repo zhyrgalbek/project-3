@@ -1,0 +1,39 @@
+.footer-foot
+	background: $footer-foot__fon
+	padding: 40px 0
+	+setka(1, 1/2)
+	.footer-foot__p
+		+montserrat(300)
+		font-size: 13px
+		padding: 8px 0
+		line-height: 20px
+		color: $footer-foot__p-color
+		text-align: center
+	.footer-foot__p-logo
+		color: $footer-foot__p-logo-color
++media(480px)
+	.footer-foot-block1
+		display: flex
+		justify-content: center
+	.footer-foot__p
+		margin-left: 20px
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			top: 10px
+			left: 100%
+			bottom: 10px
+			display: block
+			border-right: 1px solid $footer-foot__p-color
+			margin-left: 10px
+		&:first-child
+			margin-left: 0
+		&:last-child:after
+			display: none
++media(800px)
+	.footer-foot .col:last-child
+		display: flex
+		justify-content: flex-end
+	.footer-foot-block1
+		justify-content: flex-end
