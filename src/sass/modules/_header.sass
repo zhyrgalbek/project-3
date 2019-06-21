@@ -74,19 +74,23 @@
 				color: #fff
 	.nav
 		position: absolute
-		top: 20px
+		top: 0
 		left: 0
 		right: 0
 		// border: 1px solid red
-		z-index: 10
-		height: 50px
+		z-index: 1001
+		padding: 10px 20px
+		transition-duration: 0.5s
+		// height: 100px
 		.nav-block
-			display: flex
-			// align-items: center
-			justify-content: space-between
-			padding: 0 20px
-		.logo
 			// border: 1px solid green
+			display: flex
+			flex-flow: row nowrap
+			align-items: center
+			justify-content: space-between
+			// padding: 20px 30px
+		.logo
+			// border: 1px solid red
 			background: url(../image/logos.png) no-repeat
 			width: 180px
 			text-align: right
@@ -96,9 +100,14 @@
 			line-height: 50px
 			text-transform: capitalize
 			color: #fff
+			height: 60px
+			// display: none	
 		.nav-block_right
 			display: flex
 			// border: 1px solid red
+			justify-content: flex-end
+			align-items: center
+			// padding: 20px 0
 		.hamburger-inner,.hamburger-inner:after,.hamburger-inner:before
 				background-color: #fff
 		.hamburger
@@ -112,7 +121,7 @@
 			top: 100%
 			left: 0
 			right: 0
-			background: rgba(0, 0, 0, 0.9)
+			// background: rgba(0, 0, 0, 0.9)
 			height: 0
 			overflow: hidden
 			transition: height 0.3s ease-out
@@ -131,6 +140,7 @@
 					color: #fff
 					display: block
 					padding: 20px 0
+					font-size: 16px
 					// border: 1px solid green
 					&:hover
 						color: #a69683
@@ -141,22 +151,26 @@
 		width: 40px	
 		// height: 20px
 		// border: 1px solid red
-		padding: 0px 0px 0px 0
-		transition: 0.3s ease-out
+		padding: 10px 0px 10px 0
+		// transition: 0.3s ease-out
 		display: flex
-		flex-flow: row nowrap
+		// flex-flow: row nowrap
+		align-items: center
 		.search
+			// border: 1px solid red
 			width: 100%
-			height: 100%
-			padding: 10px 10px
+			height: 50px
+			// padding: 0px 8px
 			// margin: 10px 0
 			display: none
 			border: none
 			+montserrat(300)
-			font-size: 1.2em
+			font-size: 16px
+			line-height: 0
 			background: rgba(255, 255, 255, 0.5)
 			color: #000
 			border-radius: 3px
+			// margin: 0 0 22px 0
 			// opacity: 0.5
 		button
 			box-sizing: border-box
@@ -181,7 +195,7 @@
 	.header .nav .nav-block
 		// border: 1px solid red
 		display: flex
-		margin: 0 auto
+		// margin: 0 auto
 		max-width: 1180px
 		justify-content: space-between
 	.header .nav .menu
@@ -189,11 +203,14 @@
 		position: absolute
 		flex-flow: row wrap
 		// height: 70px
-		height: 100%
+		// height: 0
 		justify-content: space-around
 		align-items: center
-		background: rgba(0, 0, 0, 0)
+		// background: rgba(0, 0, 0, 0)
+		background: transparent
 		width: 100%
+	.header .nav .menu-active__tablet
+		height: 70px
 +media(1055px)
 	// .header .nav .nav-block .hamburger
 	// 	display: none
@@ -205,18 +222,21 @@
 		margin: 0 auto
 		max-width: 1180px
 		justify-content: space-between
+	.header .nav .nav-block .nav-block_right
+		width: 900px	
 	.header .nav .logo
 		// border: 1px solid red
 	.header .nav .menu
 		// border: 1px solid red
 		position: static
 		flex-flow: row nowrap
-		// height: 70px
+		height: 70px
 		// height: 100%
 		justify-content: space-between
 		align-items: center
 		background: rgba(0, 0, 0, 0)
 		padding: 0 20px
+		// transition: none
 		// width: 100%
 	.header .nav .menu .menu-li
 		margin-right: 30px
