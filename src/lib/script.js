@@ -17,8 +17,8 @@ $(document).ready(function () {
 		// margin: 10,
 		loop: true,
 		navText: ["", ""],
-		animateOut: 'zoomOut',
-		animateIn: 'zoomIn',
+		animateOut: 'fadeOut',
+		animateIn: 'fadeIn',
 		responsiveClass: true,
 		responsive: {
 			0: {
@@ -46,7 +46,7 @@ $(document).ready(function () {
 		}
 		// $(".menu").toggleClass("menu-active");
 	});
-
+	
 	$(".form button").on("click", function (e) {
 		e.preventDefault();
 		var v = $(window).width();
@@ -56,6 +56,7 @@ $(document).ready(function () {
 		});
 		$("form.form").css("transition", "0.3s ease-out");
 		$(".search").css("display", "block");
+		$(".hamburger").addClass("hamburger-drop");
 		if (v > 600) {
 			$(".logo").css("display", "block")
 			$("ul.menu").css("display", "none");
@@ -65,7 +66,6 @@ $(document).ready(function () {
 		} else {
 			$(".logo").css("display", "none");
 		}
-		$(".hamburger").addClass("hamburger-drop");
 		$(document).mouseup(function (e) {
 			if (!$(e.target).is('[data-rel="drop"]')) {
 				var w = $(window).width();
@@ -74,10 +74,6 @@ $(document).ready(function () {
 				$("form.form").css("transition", "none");
 				$(".search").css("display", "none");
 				if (w < 1055) {
-					$(".hamburger").removeClass("hamburger-drop");
-					$(".logo").css("display", "block");
-				}
-				else if (w < 600) {
 					$(".hamburger").removeClass("hamburger-drop");
 					$(".logo").css("display", "block");
 				}
@@ -111,16 +107,14 @@ $(document).ready(function () {
 			$(".tab_content .col").removeClass("zoomOut");
 			$(".tab_content .col").addClass("zoomIn").show();
 		}
-		// $(tabContent).show();
 	});
-	$(".video-js .vjs-big-play-button").click(function () {
-		$(".fonvideo").css("display", "none");
-	})
-	// $(".tab_content .col").hover(function(){
-	// 	(this).$(".tabs-block:after").css("display", "block");
-	// }, function(){
-	// 	(this).$(".tabs-block:after").css("display", "none");
-	// })
+	// $("button.vjs-big-play-button[title='Play Video']").on("click", function(e){
+	// 	// e.preventDefault();
+	// 	// $(this).parent().siblings("div.fonvideo").hide();
+	// 	// $(".wrapper main.main section.main-video div.fonvideo").addClass("video-block-none");
+	// 	// alert("Hello world");
+	// 	// $("div.fonvideo").hide();
+	// });
 	$("#main-posts__owl").owlCarousel({
 		margin: 40,
 		// nav: true,
@@ -140,7 +134,7 @@ $(document).ready(function () {
 				// loop: true
 			}
 		}
-	})
+	});
 	$(window).scroll(function () {
 		var top = $(document).scrollTop();
 		var w = $(window).width();
